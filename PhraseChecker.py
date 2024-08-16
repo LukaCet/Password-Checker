@@ -1,20 +1,28 @@
-input_string = input("Enter a phrase/word: ")
-uppercase_count = 0
-lowercase_count = 0
-digit_count = 0
-symbol_count = 0
+user_input = input("Enter a word/phrase: ")
 
-for i in range(len(input_string)):
-    if input_string[i].isupper():
-        uppercase_count += 1
-    elif input_string[i].islower():
-        lowercase_count += 1
-    elif input_string[i].isdigit():
-        digit_count += 1
+uppercase_letters = 0
+lowercase_letters = 0
+numbers = 0
+special_characters = 0
+
+for char in user_input:
+    if char.isupper():
+        uppercase_letters += 1
+    elif char.islower():
+        lowercase_letters += 1
+    elif char.isdigit():
+        numbers += 1
     else:
-        symbol_count += 1
+        special_characters += 1
 
-print(f"Uppercase letters: {uppercase_count}")
-print(f"Lowercase letters: {lowercase_count}")
-print(f"Numbers: {digit_count}")
-print(f"Symbols: {symbol_count}")
+
+sum = uppercase_letters + lowercase_letters + numbers + special_characters
+
+print(f"""
+There are: 
+- {uppercase_letters} Upper case letters
+- {lowercase_letters} lower case letters
+- {numbers} numbers
+- {special_characters} special characters
+In total there are: {sum} characters.
+""")
