@@ -1,4 +1,4 @@
-# Password-Checker
+#💻 Password Checker 🖥️
 Checks the strength of a Password/Phrase
 
 ## Code in question:
